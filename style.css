@@ -16,3 +16,10 @@ body
 	border-radius: 20px;
 	box-shadow: 2px 2px 2px 2px;
 }
+
+#tab1 > div
+{
+	border: 1px dotted gray;
+	margin: 10px;
+	padding: 10px;
+}
