@@ -16,7 +16,15 @@
 					<ul>
 						<li><a href='#tab1'>Bello</a></li>
 					</ul>
-					<div id='tab1'>?</div>
+					<div id='tab1'>
+						<div>Time</div>
+						<div>Web Socket</div>
+						<div>Order Book</div>
+						<div>Trader</div>
+						<div>Orders</div>
+						<div>Lots</div>
+						<div>Trades</div>
+					</div>
 				</div>
 			</div>
 			<div id='footer'></div>
