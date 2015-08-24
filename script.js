@@ -13,7 +13,7 @@ $(document).ready(function(){
 	{
 		p = {func: 'run'};
 		$.post('kevin.php',p,function(d){
-			$('#clock').html(d);
+			$('#kTime').html(d);
 			tick();
 		});
 	}

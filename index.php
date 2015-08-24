@@ -17,10 +17,8 @@
 						<li><a href='#tab1'>Bello</a></li>
 					</ul>
 					<div id='tab1'>
-						<div>
-							<div id='clock'>
-								<button id='go'>GO</button>
-							</div>
+						<div id='kTime'>
+							<button id='go'>GO</button>
 						</div>
 						<div>Web Socket</div>
 						<div>Order Book</div>
