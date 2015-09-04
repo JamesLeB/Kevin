@@ -1,6 +1,7 @@
 
 var ws = {};
 var message = 0;
+var sequence = 0;
 var activeBuffer = 1;
 var buffer1 = [];
 var buffer2 = [];
@@ -30,10 +31,20 @@ function tick()
 	}
 
 	var p = { func: 'run', payload: payload };
-	$.post('kevin.php',p,function(d){
+	$.post('kevin.php',p,function(d)
+	{
 		var o = $.parseJSON(d);
+
 		$('#kTime').html(o.tic);
-		if(o.payload != null){$('#kOrderBook').html(o.payload);}
+
+		//if(o.payload != null){$('#kOrderBook').html(o.payload);}
+
+		$('#kSocket').html('');
+		$('#kSocket').append('Msg: ' +message);
+		$('#kSocket').append(' B1: ' +buffer1.length);
+		$('#kSocket').append(' B2: ' +buffer2.length);
+		$('#kSocket').append(' Seq: '+sequence);
+
 		tick();
 	});
 }
@@ -54,17 +65,14 @@ function webSocket()
 		buffer2.push(evt.data);
 
 		var obj = $.parseJSON(evt.data);
+		sequence = obj.sequence;
 
-		$('#kSocket').html('');
-		$('#kSocket').append('Msg: ' +message);
-		$('#kSocket').append(' B1: ' +buffer1.length);
-		$('#kSocket').append(' B2: ' +buffer2.length);
-		$('#kSocket').append(' Seq: '+obj.sequence);
 	};
 }
 
 $(document).ready(function()
 {
 	$('#tabs').tabs({active:0});
-	$('#go').click(function(){webSocket();});
+	//$('#go').click(function(){webSocket();});
+	webSocket();
 });
