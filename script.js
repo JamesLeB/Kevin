@@ -75,7 +75,7 @@ function webSocket()
 $(document).ready(function()
 {
 	$('#tabs').tabs({active:0});
-	webSocket();
-	$('#go').click(function(){webSocket();});
+	$('#go').click(function(){stop=0;message=0;webSocket();});
 	$('#stopB').click(function(){ws.close();stop=1;});
+	webSocket();
 });
