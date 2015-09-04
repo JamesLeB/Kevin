@@ -39,6 +39,8 @@ function tick()
 
 		$('#kTime').html(o.tic);
 
+		$('#kOrderBook').html(o.book);
+
 		//if(o.payload != null){$('#kOrderBook').html(o.payload);}
 
 		$('#kSocket').html('');
