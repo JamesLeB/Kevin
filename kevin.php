@@ -2,6 +2,7 @@
 	session_start();
 
 	$func = $_POST['func'];
+	$rtn = array();
 
 	switch($func)
 	{
@@ -10,8 +11,11 @@
 			break;
 		case 'run':
 			$tic = ++$_SESSION['tic'];
-			echo $tic;
+			$rtn['tic'] = $tic;
+			$rtn['payload'] = $_POST['payload'];
 			break;
 	}
+
+	echo json_encode($rtn);
 
 ?>
