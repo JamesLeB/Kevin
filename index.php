@@ -20,12 +20,12 @@
 						<div id='kTime'>
 							<button id='go'>GO</button>
 						</div>
-						<div>Web Socket</div>
-						<div>Order Book</div>
+						<div id='kSocket'></div>
+						<div id='kOrderBook'></div>
 						<div>Trader</div>
 						<div>Orders</div>
 						<div>Lots</div>
-						<div>Trades</div>
+						<div id='kTrades'>Trades</div>
 					</div>
 				</div>
 			</div>
