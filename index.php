@@ -2,10 +2,10 @@
 <html>
 	<head>
 		<title>Kevin</title>
-		<script src='jquery-1.11.1.js'></script>
-		<script src='jquery-ui.js'></script>
+		<script src='jquery/jquery-1.11.1.js'></script>
+		<script src='jquery/jquery-ui.js'></script>
 		<script src='script.js'></script>
-		<link  href='jquery-ui.css' rel='stylesheet'/>
+		<link  href='jquery/jquery-ui.css' rel='stylesheet'/>
 		<link  href='style.css' rel='stylesheet'/>
 	</head>
 	<body>
