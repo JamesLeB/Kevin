@@ -1,4 +1,6 @@
 
+var stop = 0;
+
 var ws = {};
 var message = 0;
 var sequence = 0;
@@ -45,7 +47,7 @@ function tick()
 		$('#kSocket').append(' B2: ' +buffer2.length);
 		$('#kSocket').append(' Seq: '+sequence);
 
-		tick();
+		if(stop==0){tick();}
 	});
 }
 
@@ -73,6 +75,7 @@ function webSocket()
 $(document).ready(function()
 {
 	$('#tabs').tabs({active:0});
-	//$('#go').click(function(){webSocket();});
 	webSocket();
+	$('#go').click(function(){webSocket();});
+	$('#stopB').click(function(){ws.close();stop=1;});
 });
