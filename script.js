@@ -81,10 +81,20 @@ function stopx()
 	stop=1;
 }
 
+function getBook()
+{
+	var p = {func: 'book'};
+	$.post('kevin.php',p,function(d){
+		var o = $.parseJSON(d);
+		$('#kOrders').html(o.book);
+	});
+}
+
 $(document).ready(function()
 {
 	$('#tabs').tabs({active:0});
 	$('#go').click(function(){stop=0;message=0;webSocket();});
 	$('#stopB').click(function(){stopx();});
+	$('#getBook').click(function(){getBook();});
 	//webSocket();
 });

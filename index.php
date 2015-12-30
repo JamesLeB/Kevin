@@ -25,8 +25,9 @@
 						<div id='kTrader'>
 							<button id='go'>GO</button>
 							<button id='stopB'>Stop</button>
+							<button id='getBook'>GetBook</button>
 						</div>
-						<div>Orders</div>
+						<div id='kOrders'>Orders</div>
 						<div>Lots</div>
 						<div id='kTrades'>Trades</div>
 					</div>

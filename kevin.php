@@ -10,6 +10,9 @@
 			$_SESSION['tic'] = 0;
 			$_SESSION['messages'] = array();
 			break;
+		case 'book':
+			$rtn['book'] = 'the book will go here';
+			break;
 		case 'run':
 			$tic = ++$_SESSION['tic'];
 			$rtn['tic'] = $tic; 
