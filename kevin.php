@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	include('classes/coinbase.php');
 
 	$func = $_POST['func'];
 	$rtn = array();
@@ -11,7 +12,8 @@
 			$_SESSION['messages'] = array();
 			break;
 		case 'book':
-			$rtn['book'] = 'the book will go here';
+			$cb = new coinbase();
+			$rtn['book'] = $cb->test();
 			break;
 		case 'run':
 			$tic = ++$_SESSION['tic'];
