@@ -4,6 +4,8 @@
 		<title>Kevin</title>
 		<script src='jquery/jquery-1.11.1.js'></script>
 		<script src='jquery/jquery-ui.js'></script>
+		<!--
+		--!>
 		<script src='script.js'></script>
 		<link  href='jquery/jquery-ui.css' rel='stylesheet'/>
 		<link  href='style.css' rel='stylesheet'/>
@@ -17,8 +19,7 @@
 						<li><a href='#tab1'>Bello</a></li>
 					</ul>
 					<div id='tab1'>
-						<div id='kTime'>
-						</div>
+						<div id='kTime'></div>
 						<div id='kSocket'></div>
 						<div id='kOrderBook'></div>
 						<div id='kTrader'>

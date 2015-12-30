@@ -1,6 +1,4 @@
-
 var stop = 0;
-
 var ws = {};
 var message = 0;
 var sequence = 0;
@@ -38,8 +36,10 @@ function tick()
 		var o = $.parseJSON(d);
 
 		$('#kTime').html(o.tic);
+		if(o.book != 0){
+			$('#kOrderBook').html(o.book);
+		}
 
-		$('#kOrderBook').html(o.book);
 
 		//if(o.payload != null){$('#kOrderBook').html(o.payload);}
 
@@ -48,7 +48,8 @@ function tick()
 		$('#kSocket').append(' B1: ' +buffer1.length);
 		$('#kSocket').append(' B2: ' +buffer2.length);
 		$('#kSocket').append(' Seq: '+sequence);
-
+		$('#kSocket').append(' stop: '+o.stop);
+		if(o.stop==1){stopx();}
 		if(stop==0){tick();}
 	});
 }
@@ -74,10 +75,16 @@ function webSocket()
 	};
 }
 
+function stopx()
+{
+	ws.close();
+	stop=1;
+}
+
 $(document).ready(function()
 {
 	$('#tabs').tabs({active:0});
 	$('#go').click(function(){stop=0;message=0;webSocket();});
-	$('#stopB').click(function(){ws.close();stop=1;});
-	webSocket();
+	$('#stopB').click(function(){stopx();});
+	//webSocket();
 });
