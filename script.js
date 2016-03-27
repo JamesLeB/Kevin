@@ -92,9 +92,9 @@ function getBook()
 
 $(document).ready(function()
 {
-	$('#tabs').tabs({active:0});
-	$('#go').click(function(){stop=0;message=0;webSocket();});
-	$('#stopB').click(function(){stopx();});
-	$('#getBook').click(function(){getBook();});
+	//$('#tabs').tabs({active:0});
+	//$('#go').click(function(){stop=0;message=0;webSocket();});
+	//$('#stopB').click(function(){stopx();});
+	//$('#getBook').click(function(){getBook();});
 	//webSocket();
 });
