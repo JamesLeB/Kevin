@@ -1,0 +1,22 @@
+
+body
+{
+	background : gray;
+}
+#wrapper{
+	background : white;
+	padding : 10px;
+	width : 95%;
+	margin-left : auto;
+	margin-right : auto;
+}
+#pageHead
+{
+	padding: 5px;
+	padding-bottom: 10px;
+}
+#pageHead button
+{
+	font-size: 120%;
+	margin-right: 15px;
+}
