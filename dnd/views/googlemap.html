@@ -1,0 +1,23 @@
+<div id=test></div>
+
+<script>
+
+var zoom = 17;
+var centerN = '1615 Avenue I, Brooklyn, NY'
+var centerL = '40,0'
+
+var mapText = "<img src='" +
+"https://maps.googleapis.com/maps/api/staticmap"+
+"?center="+centerN+
+"&size=640x320"+
+"&scale=2"+
+"&zoom="+zoom+
+"&maptype=terrain"+
+"&style=feature:all|element:labels|visibility:off"+
+"&style=feature:road|element:all|visibility:on"+
+"&key=AIzaSyCLZ3GeUQVl4p5IRDa5902NJsJTs6boRaU"+
+"'/>";
+
+$('#test').html(mapText);
+
+</script>
