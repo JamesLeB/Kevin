@@ -2,21 +2,31 @@
 
 <script>
 
-var zoom = 17;
+var zoom = 10;
+
 var centerN = '1615 Avenue I, Brooklyn, NY'
-var centerL = '40,0'
+var centerL = '40.7625,-73.9503'
+
+//var marker1 = '40.7625,-73.9503'
+var marker1 = '360 Park Avenue South, New York, NY'
 
 var mapText = "<img src='" +
 "https://maps.googleapis.com/maps/api/staticmap"+
-"?center="+centerN+
+"?center="+centerL+
 "&size=640x320"+
 "&scale=2"+
 "&zoom="+zoom+
 "&maptype=terrain"+
 "&style=feature:all|element:labels|visibility:off"+
-"&style=feature:road|element:all|visibility:on"+
+"&style=feature:road|element:all|visibility:off"+
+"&markers=color:green%7Csize:small%7C"+marker1+
 "&key=AIzaSyCLZ3GeUQVl4p5IRDa5902NJsJTs6boRaU"+
 "'/>";
+
+//"&markers=color:green%7Csize:small%7C40.7625,-73.9503"+
+
+//"&style=feature:water|element:geometry|visibility:on"+
+//"&style=feature:water|element:labels.text|visibility:on"+
 
 $('#test').html(mapText);
 
